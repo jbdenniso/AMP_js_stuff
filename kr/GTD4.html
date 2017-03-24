@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Experiment</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+	</head>
+	<body align = "center">
+
+		<h2></h2>
+		<!-- This section is where all the stimuli will be presented during the experiment. -->
+		<div id='experiment' align = "center" ;
+		style="display: None; margin-right:50px; margin-left:50px; margin-top:0px;">
+			<p id = 'textAboveProbe'>Is the <u>second</u> image an OBJECT or FACE?</p>
+			<div id = 'probeHolder' style="width:60%;  min-height:300px; max-height:300px; padding-top:0px; padding-bottom:300px; border: 1px solid;">
+				<p id = 'probeText' style="font-size:100px ; line-height:400px; font-weight:bold;">Hello</p> <!--This doesn't behave as it should for long text-->
+			</div>
+			<p id = 'textBelowProbe'>
+				Q = FACE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				P = OBJECT
+			</p>
+		</div>	
+				
+	<!-- Instructions here are shown prior to begining the experiment. -->
+		<div id="instructions" align = "center" ;
+		style="display:Inline; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p>
+				PLEASE READ THE FOLLOWING INSTRUCTIONS CAREFULLY. <BR><BR>This experiment involves making CATEGORY JUDGMENTS. <br>
+				On each trial, a picture will appear on the screen. <br>
+				Your task is to identify the picture as a FACE or an OBJECT,<br>
+				as <u>QUICKLY and ACCURATELY as possible.<u/></p>
+			<p>
+				If the picture is a FACE, press the "Q" key <br>
+				If the picture is an OBJECT, press the "P" key </p>
+
+			<p>
+				<b><u>IMPORTANTLY</b></u>, the images you are to classify will be <b><u>blurry</b></u>, and will appear directly after short presentations of <b><u> distracter images</b></u>.<br>Please respond to the <b><u>second image you see</b></u> - and categorize it as a face or an object. </p><p>You will complete a total of 160 trials.</p><p>When you are ready to start the experiment, please press 'Begin'.
+			</p> <br> <br>
+			<p>
+				<button onclick="begin_experiment();">Begin</button>
+			</p>		
+		</div>
+		
+		<!-- This section appears after the last trial. -->
+		<div id="debrief" align = "center" ;
+		style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p>
+<a href="https://nyu.qualtrics.com/SE/?SID=SV_3KIrmpjrHLDAEMR" onclick="location.href=this.href+'&subject='+subject;return false;">The main portion of the experiment is complete! Please click here to answer a few  questions.</a>
+			</p>	
+		</div>
+		
+		<div id="hidden_div" style = "Display: None;">
+		<!-- 
+		Nothing within this section will be visable to participants.
+		Note the 'id' and 'name' values for each <input> below.
+		In your JavaScript file, you will need to include a  list of these ids, along with
+		a list of the corresponding variable for each;
+		i.e. 
+			var logging_box_ids = [Date(), trial_number, probe, code, response, rt]
+			var variables_to_log = ['timeBox', 'trialBox', 'probeBox', 'codeBox', 
+						'responseBox', 'rtBox']
+						
+		The 'name' value is the name this variable gets sent to the server as.
+		It is recomended that you use the same names as used for the variables in the experiment itself,
+		and, when it comes to creating your database, using 	
+		 -->
+<form id = "responseForm" style="display:none;" method ="POST" action ="../save_data.php">
+				Paradigm: <input id = "paradigmBox"    name = "paradigm"><br>
+				Timestamp: <input id = "timeBox"    name = "time"><br>
+				Trial <input id = "trialBox"    name = "trial_number"><br>
+				Stimuli <input id = "stimuliBox"    name = "stimuli_number"><br>
+				Prime<input id = "primeBox"    name = "prime"><br>
+				Probe<input id = "probeBox"    name = "probe"><br>
+				Code<input id = "codeBox"    name = "code"><br>
+				Response<input id = "responseBox"    name = "response"><br>
+				rt<input id = "rtBox"    name = "rt"><br>
+				subject<input id = "SubjectBox" name = "subject"><br>
+				
+		</form>
+		
+			<!--<button onclick=" document.getElementById('hidden_div').style.display = 'None';">Hide</button>
+		</div>-->
+		<script src="../js/jquery2.0.3.js"></script>
+		<script src="../js/functions.js"></script>
+		<script src="../js/stimuli_v2.js"></script>
+		<script src="../js/lexical_decision_keyboard_response_GTD4.js"></script>
+	</body>
+
+</html>
+
+<!--
+    This page is part of PsychScript
+    Copyright (C) 2013 Eoin Travers etravers01@qub.ac.uk.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->

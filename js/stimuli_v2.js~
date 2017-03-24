@@ -1,0 +1,32 @@
+// for word stimuli
+
+//var probes = [
+//	'backgrounds', 'widespread', 'dropping'
+//	];
+	
+//var primes = [
+//	'amy', 'rose', 'krosch'
+//	];
+
+
+//var probes = [
+//	'Ca01_1.jpg', 'Ho01_1.jpg', 'mb007_1.jpg'
+//	];
+	
+var probes = new Array('Ca01.jpg', 'Ca09.jpg', 'Ca17.jpg', 'Ca25.jpg', 'Ch06.jpg', 'Ch14.jpg', 'Ch22.jpg', 'Ho03.jpg', 'Ho11.jpg', 'Ho19.jpg', 'mb001.jpg', 'mb005.jpg', 'mb009.jpg', 'mb013.jpg', 'mb017.jpg', 'mw001.jpg', 'mw005.jpg', 'mw009.jpg', 'mw013.jpg', 'mw017.jpg', 'Ca03.jpg', 'Ca11.jpg', 'Ca19.jpg', 'Ca27.jpg', 'Ch08.jpg', 'Ch16.jpg', 'Ch24.jpg', 'Ho05.jpg', 'Ho13.jpg', 'Ho21.jpg', 'mb002.jpg', 'mb006.jpg', 'mb010.jpg', 'mb014.jpg', 'mb018.jpg', 'mw002.jpg', 'mw006.jpg', 'mw010.jpg', 'mw014.jpg', 'mw018.jpg', 'Ca05.jpg', 'Ca13.jpg', 'Ca21.jpg', 'Ch02.jpg', 'Ch10.jpg', 'Ch18.jpg', 'Ch26.jpg', 'Ho07.jpg', 'Ho15.jpg', 'Ho23.jpg', 'mb003.jpg', 'mb007.jpg', 'mb011.jpg', 'mb015.jpg', 'mb019.jpg', 'mw003.jpg', 'mw007.jpg', 'mw011.jpg', 'mw015.jpg', 'mw019.jpg', 'Ca07.jpg', 'Ca15.jpg', 'Ca23.jpg', 'Ch04.jpg', 'Ch12.jpg', 'Ch20.jpg', 'Ho01.jpg', 'Ho09.jpg', 'Ho17.jpg', 'Ho25.jpg', 'mb004.jpg', 'mb008.jpg', 'mb012.jpg', 'mb016.jpg', 'mb020.jpg', 'mw004.jpg', 'mw008.jpg', 'mw012.jpg', 'mw016.jpg', 'mw020.jpg', 'Ca02.jpg', 'Ca10.jpg', 'Ca18.jpg', 'Ca26.jpg', 'Ch07.jpg', 'Ch15.jpg', 'Ch23.jpg', 'Ho04.jpg', 'Ho12.jpg', 'Ho20.jpg', 'mb021.jpg', 'mb025.jpg', 'mb029.jpg', 'mb033.jpg', 'mb037.jpg', 'mw021.jpg', 'mw025.jpg', 'mw029.jpg', 'mw033.jpg', 'mw037.jpg', 'Ca04.jpg', 'Ca12.jpg', 'Ca20.jpg', 'Ch01.jpg', 'Ch09.jpg', 'Ch17.jpg', 'Ch25.jpg', 'Ho06.jpg', 'Ho14.jpg', 'Ho22.jpg', 'mb022.jpg', 'mb026.jpg', 'mb030.jpg', 'mb034.jpg', 'mb038.jpg', 'mw022.jpg', 'mw026.jpg', 'mw030.jpg', 'mw034.jpg', 'mw038.jpg', 'Ca06.jpg', 'Ca14.jpg', 'Ca22.jpg', 'Ch03.jpg', 'Ch11.jpg', 'Ch19.jpg', 'Ch27.jpg', 'Ho08.jpg', 'Ho16.jpg', 'Ho24.jpg', 'mb023.jpg', 'mb027.jpg', 'mb031.jpg', 'mb035.jpg', 'mb039.jpg', 'mw023.jpg', 'mw027.jpg', 'mw031.jpg', 'mw035.jpg', 'mw039.jpg', 'Ca08.jpg', 'Ca16.jpg', 'Ca24.jpg', 'Ch05.jpg', 'Ch13.jpg', 'Ch21.jpg', 'Ho02.jpg', 'Ho10.jpg', 'Ho18.jpg', 'Ho26.jpg', 'mb024.jpg', 'mb028.jpg', 'mb032.jpg', 'mb036.jpg', 'mb040.jpg', 'mw024.jpg', 'mw028.jpg', 'mw032.jpg', 'mw036.jpg', 'mw040.jpg');
+var probe_imgs = preload_images(probes, '../kr/images/targets/')
+	
+
+var primes = new Array('T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T1.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T2.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T3.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'T4.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S1.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S2.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S3.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg', 'S4.jpg');
+var prime_imgs = preload_images(primes, '../kr/images/primes/')
+
+
+codes = ['TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TB', 'TB', 'TB', 'TB', 'TB', 'TW', 'TW', 'TW', 'TW', 'TW', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TB', 'TB', 'TB', 'TB', 'TB', 'TW', 'TW', 'TW', 'TW', 'TW', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TB', 'TB', 'TB', 'TB', 'TB', 'TW', 'TW', 'TW', 'TW', 'TW', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TO', 'TB', 'TB', 'TB', 'TB', 'TB', 'TW', 'TW', 'TW', 'TW', 'TW', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SB', 'SB', 'SB', 'SB', 'SB', 'SW', 'SW', 'SW', 'SW', 'SW', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SB', 'SB', 'SB', 'SB', 'SB', 'SW', 'SW', 'SW', 'SW', 'SW', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SB', 'SB', 'SB', 'SB', 'SB', 'SW', 'SW', 'SW', 'SW', 'SW', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SO', 'SB', 'SB', 'SB', 'SB', 'SB', 'SW', 'SW', 'SW', 'SW', 'SW'];
+
+var buttons = new Array('yes.png', 'no.png', 'start.png', 'next.png');
+var button_imgs = preload_images(buttons, '../images/')
+
+// If using error_feedback, you need to define the possible codes, and 
+// the correct response for each.
+var list_of_codes = new Array('common_word', 'rare_word','pseudo_word', 'consonants');
+var correct_responses = new Array(1, 1, 2, 2);

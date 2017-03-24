@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Experiment</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+	</head>
+	<body align = "center">
+
+		<h2></h2>
+		<!-- This section is where all the stimuli will be presented during the experiment. -->
+		<div id='experiment' align = "center" ;
+		style="display: None; margin-right:50px; margin-left:50px; margin-top:0px;">
+			<p id = 'textAboveProbe'>Is the <u>second</u> image worth a lot less (press Q), a little less (press E), a little more (press I) or a lot more (press P) than the value provided?</p>
+			<div id = 'probeHolder' style="width:60%;  min-height:300px; max-height:300px; padding-top:0px; padding-bottom:300px; border: 1px solid;">
+				<p id = 'probeText' style="font-size:100px ; line-height:400px; font-weight:bold;">Hello</p> <!--This doesn't behave as it should for long text-->
+			</div>
+			<p id = 'textBelowProbe'>
+				Q = OBJECT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				P = FACE
+			</p>
+		</div>	
+				
+	<!-- Instructions here are shown prior to begining the experiment. -->
+		<div id="instructions" align = "center" ;
+		style="display:Inline; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p>
+				PLEASE READ THE FOLLOWING INSTRUCTIONS CAREFULLY. <BR>
+ <br>
+				On each trial, you will see three images in quick succession. One will be the image of a face, the second will be a household item, and the third will be "static". The face serves as a warning for the second image. Your task will be to determine the value of the household item after being presented with an image after only a short amount of time.<BR> </br>
+				<p> Your task will be to determine the value of the household item after being presented with an image after only a short amount of time.<br>
+
+				
+				<br>If you think the object is a worth much less than value presented press the  "q" key. <br>
+				If you think the object is a worth a little less than value presented press the "e" key.<br>
+If you think the object is a worth a little more than value presented press the "i" key.<br>
+If you think the object is a worth much more than value presented press the "p" key.<br>
+ </p>
+
+			<p>
+				It is important to note that the real-life image can sometimes bias
+people’s judgments of the drawings. Because we are interested in how
+people can avoid being biased,
+<b>please try your absolute best not to
+let the real-life images bias your judgment of the drawings!</b>
+Give
+us an honest assessment of the drawings, regardless of the images that
+precede them.</p><p>You will complete a total of 20 trials.</p><p>When you are ready to start the experiment, please press 'Begin'.
+			</p> <br> <br>
+			<p>
+				<button onclick="begin_experiment();">Begin</button>
+			</p>		
+		</div>
+		
+		<!-- This section appears after the last trial. -->
+		<div id="debrief" align = "center" ;
+		style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p>
+<a href="https://nyu.qualtrics.com/SE/?SID=SV_3KIrmpjrHLDAEMR" onclick="location.href=this.href+'&subject='+subject;return false;">The main portion of the experiment is complete! Please click here to answer a few  questions.</a>
+			</p>	
+		</div>
+		
+		<div id="hidden_div" style = "Display: None;">
+		<!-- 
+		Nothing within this section will be visable to participants.
+		Note the 'id' and 'name' values for each <input> below.
+		In your JavaScript file, you will need to include a  list of these ids, along with
+		a list of the corresponding variable for each;
+		i.e. 
+			var logging_box_ids = [Date(), trial_number, probe, code, response, rt]
+			var variables_to_log = ['timeBox', 'trialBox', 'probeBox', 'codeBox', 
+						'responseBox', 'rtBox']
+						
+		The 'name' value is the name this variable gets sent to the server as.
+		It is recomended that you use the same names as used for the variables in the experiment itself,
+		and, when it comes to creating your database, using 	
+		 -->
+<form id = "responseForm" style="display:none;" method ="POST" action ="../save_data.php">
+				Paradigm: <input id = "paradigmBox"    name = "paradigm"><br>
+				Timestamp: <input id = "timeBox"    name = "time"><br>
+				Trial <input id = "trialBox"    name = "trial_number"><br>
+				Stimuli <input id = "stimuliBox"    name = "stimuli_number"><br>
+				Prime<input id = "primeBox"    name = "prime"><br>
+				Probe<input id = "probeBox"    name = "probe"><br>
+				Code<input id = "codeBox"    name = "code"><br>
+				Response<input id = "responseBox"    name = "response"><br>
+				rt<input id = "rtBox"    name = "rt"><br>
+				subject<input id = "SubjectBox" name = "subject"><br>
+				
+		</form>
+		
+			<!--<button onclick=" document.getElementById('hidden_div').style.display = 'None';">Hide</button>
+		</div>-->
+		<script src="../js/jquery2.0.3.js"></script>
+		<script src="../js/functions.js"></script>
+		<script src="../js/stimuli_v2.js"></script>
+		<script src="../js/lexical_decision_keyboard_response_GTD1.js"></script>
+	</body>
+
+</html>
+
+<!--
+    This page is part of PsychScript
+    Copyright (C) 2013 Eoin Travers etravers01@qub.ac.uk.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
